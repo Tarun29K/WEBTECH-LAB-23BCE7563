@@ -1,0 +1,27 @@
+.card {
+  border: 2px solid #ccc;
+  padding: 20px; 
+  margin: 15px;
+  box-shadow: 3px 6px rgba(0.2,0.2,0.2,0.2);
+  width: 300px;
+}
+
+.buy-btn {
+  background-color: blue;
+  color: white;
+  padding: 11px;
+}
+
+.buy-btn:hover {
+  background-color: darkblue;
+  cursor: pointer;
+}
+
+h3{
+    text-align: center;
+}
+
+.button-container{
+    display: flex;
+    justify-content: end;
+}
