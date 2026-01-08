@@ -1,9 +1,9 @@
-// 1. Setup Selectors
+
 const taskInput = document.getElementById('taskInput');
 const addBtn = document.getElementById('addBtn');
 const columns = document.querySelectorAll('.column');
 
-// 2. Add Task Functionality
+// task
 addBtn.addEventListener('click', () => {
     const taskName = taskInput.value.trim();
     if (taskName === "") return;
@@ -25,7 +25,7 @@ function createTask(name) {
         <span class="success-msg">Task Completed Successfully!</span>
     `;
 
-    // Initialize drag event for this specific card
+    //drag function for task
     card.addEventListener('dragstart', (e) => {
         e.dataTransfer.setData("text/plain", e.target.id);
     });
@@ -33,20 +33,17 @@ function createTask(name) {
     document.getElementById('todo').appendChild(card);
 }
 
-// 3. Handle Column Drag & Drop Events
+// drag & drop event
 columns.forEach(column => {
-    // Necessary to allow dropping
     column.addEventListener('dragover', (e) => {
         e.preventDefault();
         column.classList.add('drag-over');
     });
 
-    // Remove highlight when card leaves column area
     column.addEventListener('dragleave', () => {
         column.classList.remove('drag-over');
     });
 
-    // Handle the actual drop
     column.addEventListener('drop', (e) => {
         e.preventDefault();
         column.classList.remove('drag-over');
@@ -54,7 +51,7 @@ columns.forEach(column => {
         const draggedId = e.dataTransfer.getData("text/plain");
         const draggedElement = document.getElementById(draggedId);
         
-        // Ensure we append to the column even if dropped on another card
+        //append element to column
         column.appendChild(draggedElement);
     });
 });

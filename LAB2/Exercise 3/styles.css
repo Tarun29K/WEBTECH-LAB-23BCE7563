@@ -42,7 +42,7 @@ button {
     transition: background 0.2s;
 }
 
-/* Visual cue when a card is held over a column */
+/* drag animation */
 .column.drag-over { 
     border-color: #3498db; 
     background: #e1e8ed; 
@@ -71,7 +71,7 @@ button {
     margin-top: 5px;
 }
 
-/* Automatic styling when moved to the 'completed' column */
+/*completed animation */
 #completed .task-card { 
     background: #d4edda; 
     border-left: 5px solid #28a745; 
