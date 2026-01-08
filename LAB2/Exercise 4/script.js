@@ -38,6 +38,7 @@ form.addEventListener('submit', (e) => {
     displayUsers();
 });
 
+//user table
 function displayUsers() {
     let users = JSON.parse(localStorage.getItem('users')) || [];
     userList.innerHTML = '';
@@ -54,6 +55,7 @@ function displayUsers() {
     });
 }
 
+//delete single user
 window.deleteUser = function(index) {
     let users = JSON.parse(localStorage.getItem('users'));
     users.splice(index, 1);
@@ -61,6 +63,7 @@ window.deleteUser = function(index) {
     displayUsers();
 };
 
+//clear all users
 clearBtn.addEventListener('click', () => {
     if (confirm("Are you sure you want to delete All users?")) {
         localStorage.removeItem('users');
