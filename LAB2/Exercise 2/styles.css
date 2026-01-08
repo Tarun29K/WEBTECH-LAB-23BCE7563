@@ -1,0 +1,26 @@
+body { 
+    font-family: sans-serif; 
+    max-width: 800px; 
+    margin: 40px auto; 
+    padding: 20px; 
+    line-height: 1.6; 
+}
+
+.media-container { 
+    background: lightgray; 
+    padding: 20px; 
+    border-radius: 8px; 
+    margin-bottom: 30px; 
+    border: 1px solid #ddd; 
+}
+
+video { 
+    width: 100%; 
+    max-width: 600px; 
+    border-radius: 4px; 
+}
+
+.timestamp { 
+    font-weight: bold; 
+    color: red; 
+    margin-top: 10px; }
