@@ -1,0 +1,82 @@
+body { 
+    font-family: sans-serif; 
+    background: white; 
+    padding: 20px; 
+}
+
+.controls { 
+    text-align: center; 
+    margin-bottom: 30px; 
+}
+
+input { 
+    padding: 10px; 
+    width: 250px; 
+    border: 1px solid #ddd; 
+    border-radius: 4px; 
+}
+
+button { 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    background: green; 
+    color: white; 
+    border: none; 
+    border-radius: 4px; 
+}
+
+.board { 
+    display: flex; 
+    gap: 20px; 
+    justify-content: center; 
+    align-items: flex-start; 
+}
+
+.column { 
+    background: #ebedef; 
+    width: 250px; 
+    min-height: 400px; 
+    border-radius: 8px; 
+    padding: 15px; 
+    border: 2px dashed transparent;
+    transition: background 0.2s;
+}
+
+/* Visual cue when a card is held over a column */
+.column.drag-over { 
+    border-color: #3498db; 
+    background: #e1e8ed; 
+}
+
+.task-card {
+    background: white; 
+    padding: 12px; 
+    margin-top: 10px;
+    border-radius: 5px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    cursor: grab;
+}
+
+.task-card p { 
+    margin: 5px 0; 
+    font-size: 0.8rem; 
+    color: #7f8c8d; 
+}
+
+.success-msg { 
+    color: #27ae60; 
+    font-weight: bold; 
+    font-size: 0.8rem; 
+    display: none; 
+    margin-top: 5px;
+}
+
+/* Automatic styling when moved to the 'completed' column */
+#completed .task-card { 
+    background: #d4edda; 
+    border-left: 5px solid #28a745; 
+}
+
+#completed .success-msg { 
+    display: block; 
+}
