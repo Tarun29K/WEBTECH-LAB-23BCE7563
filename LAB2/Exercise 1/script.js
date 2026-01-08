@@ -1,6 +1,6 @@
 
 const canvas = document.getElementById('myCanvas');
-const ctx = canvas.getContext('2d');
+const ctx = canvas.getContext('2d');    //canvas rendering context object
 
 //Filled rectangle
 ctx.fillStyle = 'blue';
