@@ -1,0 +1,41 @@
+<form id="registrationForm">
+  <div>
+    <label>Name:</label>
+    <input type="text" id="name">
+    <span class="error" id="nameError"></span>
+  </div>
+  <div>
+    <label>Email:</label>
+    <input type="email" id="email">
+    <span class="error" id="emailError"></span>
+  </div>
+  <div>
+    <label>Age:</label>
+    <input type="number" id="age" min="1" max="100">
+    <span class="error" id="ageError"></span>
+  </div>
+  <div>
+    <label>Role:</label>
+    <select id="role">
+      <option value="student">Student</option>
+      <option value="teacher">Teacher</option>
+      <option value="admin">Admin</option>
+    </select>
+  </div>
+  <div id="skillsGroup">
+    <label>Skills:</label>
+    <input type="text" id="skills">
+    <span class="error" id="skillsError"></span>
+  </div>
+  <div>
+    <label>Password:</label>
+    <input type="password" id="password">
+    <span class="error" id="passwordError"></span>
+  </div>
+  <div>
+    <label>Confirm Password:</label>
+    <input type="password" id="confirmPassword">
+    <span class="error" id="confirmError"></span>
+  </div>
+  <button type="submit">Register</button>
+</form>
