@@ -1,4 +1,4 @@
-// 1. Data Structure (Requirement 1)
+
 const questions = [
     {
         id: "q1",
