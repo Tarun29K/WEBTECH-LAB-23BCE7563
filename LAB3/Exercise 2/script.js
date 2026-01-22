@@ -6,14 +6,12 @@ const productSelect = document.getElementById('productSelect');
 const addBtn = document.getElementById('addBtn');
 const cartTableBody = document.getElementById('cartTableBody');
 
-// 2. Add Item Function (Requirement 2)
 addBtn.addEventListener('click', function() {
     const name = productSelect.value;
     const option = productSelect.options[productSelect.selectedIndex];
     const price = parseFloat(option.getAttribute('price'));
     const category = option.getAttribute('category');
 
-    // Check if item already exists
     const existingItem = cart.find(item => item.name === name);
     if (existingItem) {
         existingItem.quantity++;
@@ -23,25 +21,22 @@ addBtn.addEventListener('click', function() {
     renderCart();
 });
 
-// 3. Remove Item Function
 function removeItem(index) {
     cart.splice(index, 1);
     renderCart();
 }
 
-// 4. Update Quantity
 function changeQty(index, delta) {
     cart[index].quantity += delta;
     if (cart[index].quantity <= 0) cart.splice(index, 1);
     renderCart();
 }
 
-// 5. Coupon Logic (Requirement 4)
+//coupons
 document.getElementById('applyCoupon').addEventListener('click', function() {
     const code = document.getElementById('couponInput').value.trim().toUpperCase();
     const msg = document.getElementById('couponMsg');
 
-    // Requirement 4: String methods to parse code (Format: NAME-CATEGORY)
     if (code.startsWith("SAVE") && code.includes("-")) {
         appliedCoupon = code;
         msg.textContent = "Coupon Applied!";
@@ -54,7 +49,6 @@ document.getElementById('applyCoupon').addEventListener('click', function() {
     renderCart();
 });
 
-// 6. Calculate and Display (Requirement 3, 5, 6)
 function renderCart() {
     cartTableBody.innerHTML = "";
     let subtotal = 0;
@@ -64,17 +58,16 @@ function renderCart() {
         const itemTotal = item.price * item.quantity;
         subtotal += itemTotal;
 
-        // Requirement 3: Bulk Discount (10% off if quantity > 5)
+        //bulk discount
         if (item.quantity > 5) {
             totalDiscount += itemTotal * 0.10;
         }
 
-        // Requirement 3 & 4: Category-based Coupon Discount
+        //category discount
         if (appliedCoupon && appliedCoupon.endsWith(item.category.substring(0, 4).toUpperCase())) {
-            totalDiscount += itemTotal * 0.15; // 15% off specific category
+            totalDiscount += itemTotal * 0.15;
         }
 
-        // Build Table Row
         const row = `<tr>
             <td>${item.name}</td>
             <td>${item.category}</td>
@@ -90,13 +83,13 @@ function renderCart() {
         cartTableBody.innerHTML += row;
     });
 
-    // Requirement 3: Time-based Discount (e.g., Happy Hour 5pm-6pm)
+    //time based discount
     const hour = new Date().getHours();
     if (hour === 17) {
         totalDiscount += (subtotal - totalDiscount) * 0.05;
     }
 
-    // Update Totals in DOM
+    //total amounts
     document.getElementById('subtotal').textContent = subtotal.toFixed(2);
     document.getElementById('discount').textContent = totalDiscount.toFixed(2);
     document.getElementById('finalTotal').textContent = (subtotal - totalDiscount).toFixed(2);
