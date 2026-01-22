@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Real-Time Activity Monitor</title>
+</head>
+<body>
+    <h1>User Activity Monitor</h1>
+
+    <div id="interactionZone" style="padding: 20px; border: 2px dashed #ccc;">
+        <h3>Interact Here</h3>
+        <input type="text" id="testInput" placeholder="Type or focus here...">
+        <button id="testButton">Click Me</button>
+    </div>
+
+    <br>
+    <button id="resetBtn">Reset Log</button>
+    <button id="exportBtn">Export Log</button>
+
+    <h3 id="warning" style="color: red;"></h3>
+
+    <div id="logDisplay" style="margin-top: 20px;">
+        <h3>Activity Log:</h3>
+        <ul id="logList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
