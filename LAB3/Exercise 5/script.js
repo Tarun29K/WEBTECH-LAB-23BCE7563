@@ -1,24 +1,23 @@
-// Requirement 6: Temporary Storage
+
 let currentStage = 1;
 let formData = {};
 
 const stages = document.querySelectorAll('.stage');
 const progressBar = document.getElementById('progressBar');
 
-// Requirement 4: DOM Manipulation to show/hide stages
 function updateUI() {
     stages.forEach((s, index) => {
         s.style.display = (index + 1 === currentStage) ? 'block' : 'none';
     });
     
-    // Requirement 3: Dynamic Progress Bar
+    //progress bar
     const percent = (currentStage / 4) * 100;
     progressBar.style.width = percent + "%";
 
     if (currentStage === 4) renderReview();
 }
 
-// Requirement 2: Strict Validation at each stage
+//form validation
 function validateStage() {
     if (currentStage === 1) {
         const name = document.getElementById('fname').value;
@@ -55,7 +54,7 @@ function renderReview() {
         `Name: ${formData.name}\nEmail: ${formData.email}\nPassword: ********`;
 }
 
-// Requirement 5: Prevent form submission if validation fails
+//validation check
 document.getElementById('workflowForm').addEventListener('submit', function(e) {
     if (currentStage < 4 || !validateStage()) {
         e.preventDefault();
