@@ -1,41 +1,61 @@
-<form id="registrationForm">
-  <div>
-    <label>Name:</label>
-    <input type="text" id="name">
-    <span class="error" id="nameError"></span>
-  </div>
-  <div>
-    <label>Email:</label>
-    <input type="email" id="email">
-    <span class="error" id="emailError"></span>
-  </div>
-  <div>
-    <label>Age:</label>
-    <input type="number" id="age" min="1" max="100">
-    <span class="error" id="ageError"></span>
-  </div>
-  <div>
-    <label>Role:</label>
-    <select id="role">
-      <option value="student">Student</option>
-      <option value="teacher">Teacher</option>
-      <option value="admin">Admin</option>
-    </select>
-  </div>
-  <div id="skillsGroup">
-    <label>Skills:</label>
-    <input type="text" id="skills">
-    <span class="error" id="skillsError"></span>
-  </div>
-  <div>
-    <label>Password:</label>
-    <input type="password" id="password">
-    <span class="error" id="passwordError"></span>
-  </div>
-  <div>
-    <label>Confirm Password:</label>
-    <input type="password" id="confirmPassword">
-    <span class="error" id="confirmError"></span>
-  </div>
-  <button type="submit">Register</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration System</title>
+</head>
+<body>
+    <h1>Adaptive Registration</h1>
+    
+    <form id="registrationForm">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name">
+            <span id="nameError"></span>
+        </div><br>
+
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email">
+            <span id="emailError"></span>
+        </div><br>
+
+        <div>
+            <label for="age">Age:</label>
+            <input type="number" id="age">
+            <span id="ageError"></span>
+        </div><br>
+
+        <div>
+            <label for="role">Role:</label>
+            <select id="role">
+                <option value="student">Student</option>
+                <option value="teacher">Teacher</option>
+                <option value="admin">Admin</option>
+            </select>
+        </div><br>
+
+        <div id="skillsGroup">
+            <label for="skills">Skills:</label>
+            <input type="text" id="skills">
+            <span id="skillsError"></span>
+        </div><br>
+
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password">
+            <span id="passwordError"></span>
+        </div><br>
+
+        <div>
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword">
+            <span id="confirmError"></span>
+        </div><br>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
