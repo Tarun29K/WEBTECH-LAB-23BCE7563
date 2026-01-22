@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Intelligent Shopping Cart</title>
+</head>
+<body>
+    <h1>Shopping Cart</h1>
+
+    <div>
+        <label for="productSelect">Add Item:</label>
+        <select id="productSelect">
+            <option value="Laptop" data-price="50000" data-cat="Electronics">Laptop (₹50000)</option>
+            <option value="Phone" data-price="15000" data-cat="Electronics">Phone (₹15000)</option>
+            <option value="Shirt" data-price="250" data-cat="Clothing">T-Shirt (₹250)</option>
+            <option value="Notebook" data-price="60" data-cat="Stationary">Notebook (₹60)</option>
+        </select>
+        <button id="addBtn">Add to Cart</button>
+    </div><br>
+
+    <div>
+        <label for="couponInput">Coupon Code:</label>
+        <input type="text" id="couponInput" placeholder="e.g. SAVE10-ELEC">
+        <button id="applyCoupon">Apply</button>
+        <span id="couponMsg"></span>
+    </div>
+
+    <table border="1" style="width:100%; margin-top:20px; text-align:left;">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="cartTableBody"></tbody>
+    </table>
+
+    <h3>Subtotal: ₹<span id="subtotal">0</span></h3>
+    <h3 style="color: green;">Discount: -₹<span id="discount">0</span></h3>
+    <h2>Final Total: ₹<span id="finalTotal">0</span></h2>
+
+    <script src="script.js"></script>
+</body>
+</html>
