@@ -1,0 +1,22 @@
+
+.status { 
+    margin-left: 10px; 
+    font-weight: bold; 
+}
+
+.error { 
+    color: red; 
+}
+
+.success { 
+    color: green; 
+}
+
+.loading { 
+    color: blue; 
+    font-style: italic; 
+}
+
+.hidden { 
+    display: none; 
+}
