@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Wireless Headphones",
+    "price": 1200.00,
+    "category": "Electronics"
+  },
+  {
+    "name": "Mechanical Keyboard",
+    "price": 1000.00,
+    "category": "Electronics"
+  },
+  {
+    "name": "Water Bottle",
+    "price": 500.00,
+    "category": "Home & Kitchen"
+  },
+  {
+    "name": "T-Shirt",
+    "price": 300.00,
+    "category": "Apparel"
+  },
+  {
+    "name": "Yoga Mat",
+    "price": 250.00,
+    "category": "Fitness"
+  },
+  {
+    "name": "Desk Lamp",
+    "price": 450.00,
+    "category": "Electronics"
+  },
+  {
+    "name": "Running Shoes",
+    "price": 3250.00,
+    "category": "Fitness"
+  }
+]
