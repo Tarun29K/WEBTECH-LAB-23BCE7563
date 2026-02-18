@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX Weather Info Dashboard</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="dashboard">
+    <h2>Weather Dashboard</h2>
+    <input type="text" id="city" placeholder="Enter city name...">
+    <button id="search">Search</button>
+
+    <div id="loader"></div>
+    <p id="error" class="error"></p>
+
+    <div id="weatherDisplay" class="weather-info">
+        <h2 id="cityName"></h2>
+        <h1 id="temp"></h1>
+        <p id="condition" style="text-transform: capitalize;"></p>
+        <p id="humidity"></p>
+    </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
