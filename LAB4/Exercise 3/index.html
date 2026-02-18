@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX CRUD Operations</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+    <h2>Student Management System</h2>
+    <div id="message"></div>
+
+    <form id="studentForm">
+        <div class="form-group">
+            <input type="text" id="studentId" placeholder="Student ID" required>
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="text" id="dept" placeholder="Department" required>
+            <input type="number" id="marks" placeholder="Marks" required>
+            <button type="submit" class="btn-save">Add Student</button>
+        </div>
+    </form>
+
+    <table id="studentTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Dept</th>
+                <th>Marks</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
