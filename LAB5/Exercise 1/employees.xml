@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employees>
+    <employee>
+        <id>101</id>
+        <name>Tarun Kumar</name>
+        <department>CSE</department>
+        <salary>85000</salary>
+    </employee>
+    <employee>
+        <id>102</id>
+        <name>Aditya</name>
+        <department>ECE</department>
+        <salary>70000</salary>
+    </employee>
+</employees>
