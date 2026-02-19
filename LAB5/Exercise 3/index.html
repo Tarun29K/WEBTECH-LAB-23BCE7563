@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Records (JSON)</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <h2>Student Record System</h2>
+
+    <div>
+        <input type="text" id="studId" placeholder="Student ID">
+        <input type="text" id="studName" placeholder="Full Name">
+        <input type="text" id="studCourse" placeholder="Course">
+        <input type="number" id="studMarks" placeholder="Marks">
+        <button onclick="addStudent()" style="background: #e1f5fe;">Add Student</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Marks</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="studentTable"></tbody>
+    </table>
+
+    <script src="./script.js"></script>
+</body>
+</html>
