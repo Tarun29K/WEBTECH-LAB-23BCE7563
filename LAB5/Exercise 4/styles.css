@@ -1,0 +1,33 @@
+body { 
+    font-family: sans-serif; 
+    padding: 20px; 
+}
+
+.low-stock { 
+    background-color: #ffebee; 
+    color: #c62828; 
+}
+
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 20px; 
+}
+
+th, td { 
+    border: 1px solid #ddd; 
+    padding: 10px; 
+    text-align: left; 
+}
+
+.controls { 
+    margin-bottom: 20px; 
+    padding: 15px; 
+    border: 1px solid #eee; 
+}
+
+#totalValue { 
+    font-weight: bold; 
+    font-size: 1.2em; 
+    margin-top: 15px; 
+}

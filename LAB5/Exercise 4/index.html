@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Inventory</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <h2>Product Inventory System</h2>
+
+    <div class="controls">
+        <input type="text" id="pid" placeholder="ID">
+        <input type="text" id="name" placeholder="Product Name">
+        <input type="text" id="cat" placeholder="Category">
+        <input type="number" id="price" placeholder="Price">
+        <input type="number" id="stock" placeholder="Stock">
+        <button onclick="addProduct()">Add Product</button>
+    </div>
+
+    <div class="controls">
+        <input type="text" id="searchBox" placeholder="Search by Category..." onkeyup="searchByCategory()">
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th><th>Name</th><th>Category</th><th>Price</th><th>Stock</th><th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="inventory"></tbody>
+    </table>
+
+    <div id="totalValue">Total Inventory Value: ₹0</div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
