@@ -1,0 +1,131 @@
+Q1 ->
+
+1. use vehicles
+
+2. show dbs
+
+3. db.createCollection("two_wheelers", { capped: true, size: 4194304, max: 2000 })
+   db.createCollection(“four_wheelers”)
+
+4. db.two_wheelers.insert({
+      bike_name: "Honda Shine", 
+      model: "gear", 
+      category: "125cc",
+      colors_available: ["red", "black", "blue"], 
+      manufacturer: "Honda", 
+      performance: 7, 
+      timestamp: new Date("2020-01-01"), 
+      price: 75000
+   })
+
+   db.two_wheelers.insert({
+      bike_name: "TVS Jupiter", 
+      model: "gearless", 
+      category: "110cc",
+      colors_available: ["white", "blue", "black"], 
+      manufacturer: "TVS",
+      performance: 8, 
+      timestamp: new Date("2021-05-10"), 
+      price: 70000
+   })
+   
+   db.two_wheelers.insert({
+      bike_name: "Yamaha FZ", 
+      model: "gear", 
+      category: "150cc",
+      colors_available: ["black", "blue", "matte red"], 
+      manufacturer: "Yamaha", 
+      performance: 9, 
+      timestamp: new Date("2019-03-15"), 
+      price: 95000
+   })
+   
+   db.two_wheelers.insert({
+      bike_name: "Bajaj Pulsar", 
+      model: "gear", 
+      category: "200cc",
+      colors_available: ["black", "red", "silver"], 
+      manufacturer: "Bajaj", 
+      performance: 8, 
+      timestamp: new Date("2022-07-20"), 
+      price: 120000
+   })
+   
+   db.two_wheelers.insert({
+      bike_name: "Activa 6G", 
+      model: "gearless", 
+      category: "110cc",
+      colors_available: ["red", "grey", "blue"],
+      manufacturer: "Honda", 
+      performance: 9, 
+      timestamp: new Date("2023-01-05"),
+      price: 85000
+   })
+
+5. db.four_wheelers.insert({
+      vehicle_name: "Maruti Swift", 
+      model: "own", 
+      category: "car", 
+      variants: ["VXI", "ZXI", "petrol"],
+      manufacturer: "Maruti", 
+      performance: 8, 
+      timestamp: new Date("2020-02-11"), 
+      price: 600000
+   })
+   
+   db.four_wheelers.insert({
+      vehicle_name: "Tata Ace", 
+      model: "commercial", 
+      category: "mini truck", 
+      variants: ["diesel"], 
+      manufacturer: "Tata", 
+      performance: 7, 
+      timestamp: new Date("2019-06-25"), 
+      price: 500000
+   })
+   
+   db.four_wheelers.insert({
+      vehicle_name: "Ashok Leyland Lorry", 
+      model: "commercial", 
+      category: "lorry", 
+      variants: ["diesel"], 
+      manufacturer: "Ashok Leyland", 
+      performance: 9, 
+      timestamp: new Date("2021-08-18"), 
+      price: 2000000
+   })
+   
+   db.four_wheelers.insert({
+      vehicle_name: "Hyundai Creta", 
+      model: "own", 
+      category: "car", 
+      variants: ["petrol", "diesel"], 
+      manufacturer: "Hyundai", 
+      performance: 9, 
+      timestamp: new Date("2022-03-14"), 
+      price: 1500000
+   })
+   
+   db.four_wheelers.insert({
+      vehicle_name: "Volvo Bus", 
+      model: "commercial", 
+      category: "bus", 
+      variants: ["diesel"], 
+      manufacturer: "Volvo", 
+      performance: 10, 
+      timestamp: new Date("2023-09-01"), 
+      price: 5000000
+   })
+
+6. db.two_wheelers.find() 
+   db.four_wheelers.find()
+
+7. db.two_wheelers.find({}, { bike_name: 1, price: 1, _id: 0 }) 
+   db.four_wheelers.find({}, { vehicle_name: 1, price: 1, _id: 0 })
+
+8. db.two_wheelers.find({ manufacturer: "Honda" })
+
+9. db.four_wheelers.find({ variants: "diesel" },{})
+
+10. db.two_wheelers.find( { performance: { $gt: 5 } }, { bike_name: 1, category: 1, manufacturer: 1, _id: 0 }) 
+    db.four_wheelers.find( { performance: { $gt: 5 } }, { vehicle_name: 1, category: 1, manufacturer: 1, _id: 0 })

@@ -1,0 +1,121 @@
+Q2 ->
+
+1. use animal
+
+2. show dbs
+
+3. db.createCollection("wild_animals", { capped: true, size: 5242880, max: 1000 }) 
+   db.createCollection("domestic_animals")
+
+4. db.wild_animals.insert({
+      animal_name: "Lion", 
+      nature: "harm", 
+      favorite_foods: ["meat", "deer"], 
+      care_taker_name: "Tarun", 
+      life_span: 12, 
+      timestamp: new Date("2021-05-15"), 
+      expenses: 50000
+   })
+   
+   db.wild_animals.insert({
+      animal_name: "Elephant", 
+      nature: "harmless", 
+      favorite_foods: ["grass", "bananas"], 
+      care_taker_name: "Gopi", 
+      life_span: 60, 
+      timestamp: new Date("2020-08-21"), 
+      expenses: 70000
+   })
+   
+   db.wild_animals.insert({
+      animal_name: "Tiger", 
+      nature: "harm", 
+      favorite_foods: ["meat", "rabbits"], 
+      care_taker_name: "Gopi", 
+      life_span: 15, 
+      timestamp: new Date("2022-01-10"), 
+      expenses: 65000
+   })
+   
+   db.wild_animals.insert({
+      animal_name: "Zebra", 
+      nature: "harmless", 
+      favorite_foods: ["grass"], 
+      care_taker_name: "Gopi", 
+      life_span: 25, 
+      timestamp: new Date("2019-11-03"), 
+      expenses: 30000
+   })
+   
+   db.wild_animals.insert({
+      animal_name: "Bear", 
+      nature: "harm", 
+      favorite_foods: ["fish", "berries"], 
+      care_taker_name: "Tarun", 
+      life_span: 20, 
+      timestamp: new Date("2023-03-12"), 
+      expenses: 45000
+   })
+
+5. db.domestic_animals.insert({
+      animal_name: "Cow", 
+      gender: "female", 
+      favorite_foods: ["grass", "hay"], 
+      animal_petname: "Ganga", 
+      life_span: 18, 
+      timestamp: new Date("2021-02-05"), 
+      expenses: 15000
+   })
+   
+   db.domestic_animals.insert({
+      animal_name: "Dog", 
+      gender: "male", 
+      favorite_foods: ["meat", "biscuits"], 
+      animal_petname: "Tommy", 
+      life_span: 12, 
+      timestamp: new Date("2020-07-20"), 
+      expenses: 10000
+   })
+   
+   db.domestic_animals.insert({
+      animal_name: "Cat", 
+      gender: "female", 
+      favorite_foods: ["milk", "fish"], 
+      animal_petname: "Kitty", 
+      life_span: 14, 
+      timestamp: new Date("2022-04-01"), 
+      expenses: 8000
+   })
+   
+   db.domestic_animals.insert({
+      animal_name: "Goat", 
+      gender: "male", 
+      favorite_foods: ["grass", "leaves"], 
+      animal_petname: "Shiva", 
+      life_span: 10, 
+      timestamp: new Date("2019-12-11"), 
+      expenses: 9000
+   })
+   
+   db.domestic_animals.insert({
+      animal_name: "Rabbit", 
+      gender: "female", 
+      favorite_foods: ["carrots", "lettuce"], 
+      animal_petname: "Bunny", 
+      life_span: 8, 
+      timestamp: new Date("2023-06-30"), 
+      expenses: 5000
+   })
+
+6. db.wild_animals.find()
+   db.domestic_animals.find()
+
+7. db.wild_animals.find({}, { animal_name: 1, expenses: 1, _id: 0 })
+   db.domestic_animals.find({}, { animal_name: 1, expenses: 1, _id: 0 })
+
+8. db.domestic_animals.find({ life_span: 8 })
+
+9. db.wild_animals.find({ care_taker_name: “Tarun” })
+
+10. db.wild_animals.find({ life_span: { $gt: 5 } }, { animal_name: 1, favorite_foods: 1, expenses: 1, _id: 0 })
+    db.domestic_animals.find( { life_span: { $gt: 5 } }, { animal_name: 1, favorite_foods: 1, expenses: 1, _id: 0 })
