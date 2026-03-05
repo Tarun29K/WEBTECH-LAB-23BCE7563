@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(cors());
 app.use(express.static('public'));
 
-// MongoDB Connection
+//MongoDB connection
 mongoose.connect('mongodb://127.0.0.1:27017/studentDB')
   .then(() => console.log("Connected to MongoDB"))
   .catch(err => console.error("Could not connect", err));
@@ -25,7 +25,7 @@ const noteSchema = new mongoose.Schema({
 
 const Note = mongoose.model('Note', noteSchema);
 
-// Routes
+//routes
 app.get('/notes', async (req, res) => {
     const notes = await Note.find();
     res.json(notes);

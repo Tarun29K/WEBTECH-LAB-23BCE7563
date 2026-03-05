@@ -1,6 +1,6 @@
 const API_URL = "http://localhost:3000/notes";
 
-// VIEW: Fetch and display notes
+//view
 async function fetchNotes() {
     const res = await fetch(API_URL);
     const notes = await res.json();
@@ -15,7 +15,7 @@ async function fetchNotes() {
     `).join('');
 }
 
-// CREATE: Add a new note
+//create
 async function addNote() {
     const data = {
         title: document.getElementById('title').value,
@@ -28,16 +28,16 @@ async function addNote() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
     });
-    fetchNotes(); // Refresh list
+    fetchNotes();
 }
 
-// DELETE: Remove a note
+//delete
 async function deleteNote(id) {
     await fetch(`${API_URL}/${id}`, { method: 'DELETE' });
     fetchNotes();
 }
 
-// UPDATE: Simple prompt-based edit
+//update
 async function editNote(id) {
     const newTitle = prompt("Enter new title:");
     const newDesc = prompt("Enter new description:");
@@ -52,5 +52,4 @@ async function editNote(id) {
     }
 }
 
-// Initial load
 fetchNotes();
