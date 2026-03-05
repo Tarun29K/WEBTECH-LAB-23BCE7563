@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Book Finder</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <header>
+        <h2>Library Search Engine</h2>
+    </header>
+
+    <div class="controls">
+        <div class="search-group">
+            <input type="text" id="search" placeholder="Search by title..." onkeyup="searchTitle()">
+        </div>
+
+        <div class="filter-group">
+            <button onclick="filterCategory('Programming')">Programming</button>
+            <button onclick="filterCategory('Fiction')">Fiction</button>
+            <button onclick="showTop()">Top Rated</button>
+        </div>
+
+        <div class="sort-group">
+            <button onclick="sortBy('price')">Sort by Price</button>
+            <button onclick="sortBy('rating')">Sort by Rating</button>
+        </div>
+    </div>
+
+    <hr>
+
+    <div id="book-list">
+        </div>
+
+    <div class="pagination-container">
+        <button id="load-more" onclick="loadMore()">Load More Results</button>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
